@@ -69,6 +69,19 @@ public/logo.webp       # Logo
 - Otomatik `sitemap.xml` ve `robots.txt`
 - Türkçe dil etiketi (`lang="tr"`) ve semantik HTML
 
+## Cloudflare Pages ile Yayınlama
+
+Proje **statik dışa aktarım** (`output: "export"`) ile yapılandırıldı; build çıktısı
+`out/` klasörüne üretilir. Cloudflare Pages ayarları:
+
+- **Framework preset:** Next.js (Static HTML Export) — ya da "None"
+- **Build command:** `npm run build`
+- **Build output directory:** `out`
+- **Node sürümü:** 20 (`.nvmrc` ile ayarlı; gerekirse ortam değişkeni `NODE_VERSION=20`)
+
+Adımlar: GitHub deposunu Cloudflare Pages'e bağlayın → yukarıdaki ayarları girin →
+Deploy. Sonraki her `git push` otomatik yeniden yayınlar.
+
 ## Yayınlama Önerisi
 
 Vercel (Next.js'in geliştiricisi) ücretsiz ve en kolay seçenektir:
