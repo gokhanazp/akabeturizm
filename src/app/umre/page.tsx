@@ -126,88 +126,84 @@ export default function UmrePage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {umreSchedule.map((row) => {
               const noPrice = row.two === "—";
-              const accent = row.program.startsWith("5★")
-                ? "from-gold-500 to-gold-700"
+              const accentBar = row.program.startsWith("5★")
+                ? "bg-gold-400"
                 : row.program.startsWith("Yakın")
-                ? "from-maroon-900 to-maroon-700"
-                : "from-maroon-800 to-maroon-600";
+                ? "bg-maroon-400"
+                : "bg-maroon-600";
               return (
                 <article
                   key={row.no}
-                  className="card group flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-soft"
+                  className="group flex flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-ink/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft"
                 >
-                  <div
-                    className={`flex items-start justify-between gap-3 bg-gradient-to-br ${accent} p-5 text-cream`}
-                  >
+                  <span className={`mb-4 block h-1 w-12 rounded-full ${accentBar}`} />
+
+                  <div className="flex items-start justify-between gap-3">
                     <div>
-                      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-cream/75">
+                      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-ink-soft/60">
                         Gidiş Tarihi
                       </p>
-                      <p className="font-serif text-2xl font-bold leading-tight">
-                        {row.date}
-                      </p>
+                      <p className="font-serif text-2xl font-bold text-ink">{row.date}</p>
                     </div>
-                    <span className="shrink-0 rounded-full bg-cream/15 px-3 py-1 text-xs font-semibold backdrop-blur">
+                    <span className="shrink-0 rounded-full bg-cream px-3 py-1 text-xs font-semibold text-ink-soft ring-1 ring-ink/10">
                       {row.duration}
                     </span>
                   </div>
 
-                  <div className="flex flex-1 flex-col p-5">
-                    <span className="inline-flex w-fit rounded-full bg-gold-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold-700">
-                      {row.program}
-                    </span>
-                    <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                      <span className="font-semibold text-ink">Oteller: </span>
-                      {row.hotels}
-                    </p>
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-gold-700">
+                    {row.program}
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
+                    <span className="font-semibold text-ink">Oteller: </span>
+                    {row.hotels}
+                  </p>
 
-                    {noPrice ? (
-                      <div className="mt-4 rounded-xl border border-maroon-200 bg-maroon-50 p-4 text-center">
-                        <p className="text-[0.7rem] font-semibold uppercase tracking-widest text-ink-soft/70">
-                          Kişi Başı Fiyat
-                        </p>
-                        <p className="mt-1 font-serif text-xl font-bold text-maroon-800">
-                          Fiyat için arayın
-                        </p>
+                  {noPrice ? (
+                    <div className="mt-4 rounded-xl bg-cream p-3 text-center">
+                      <p className="text-[0.7rem] uppercase tracking-widest text-ink-soft/60">
+                        Kişi Başı Fiyat
+                      </p>
+                      <p className="mt-0.5 font-serif text-lg font-bold text-maroon-800">
+                        Fiyat için arayın
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="mt-4">
+                      <p className="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-ink-soft/60">
+                        Kişi Başı Fiyat · Oda Tipine Göre
+                      </p>
+                      <div className="grid grid-cols-3 gap-2 text-center">
+                        {[
+                          { l: "2 Kişilik", v: row.two },
+                          { l: "3 Kişilik", v: row.three },
+                          { l: "4 Kişilik", v: row.four },
+                        ].map((p) => (
+                          <div
+                            key={p.l}
+                            className="overflow-hidden rounded-lg ring-1 ring-maroon-100"
+                          >
+                            <p className="bg-maroon-50 py-1 text-[0.64rem] font-bold uppercase tracking-wide text-maroon-700">
+                              {p.l}
+                            </p>
+                            <p className="bg-white py-2 font-serif text-lg font-bold text-maroon-800">
+                              {p.v}
+                            </p>
+                          </div>
+                        ))}
                       </div>
-                    ) : (
-                      <div className="mt-4">
-                        <p className="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-ink-soft/70">
-                          Kişi Başı Fiyat · Oda Tipine Göre
-                        </p>
-                        <div className="grid grid-cols-3 gap-2 text-center">
-                          {[
-                            { l: "2 Kişilik", v: row.two },
-                            { l: "3 Kişilik", v: row.three },
-                            { l: "4 Kişilik", v: row.four },
-                          ].map((p) => (
-                            <div
-                              key={p.l}
-                              className="overflow-hidden rounded-xl border border-gold-200 bg-white shadow-sm"
-                            >
-                              <p className="bg-maroon-700 py-1 text-[0.7rem] font-bold uppercase tracking-wide text-cream">
-                                {p.l}
-                              </p>
-                              <p className="px-1 py-2.5 font-serif text-lg font-bold text-maroon-800">
-                                {p.v}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    </div>
+                  )}
 
-                    <a
-                      href={`https://wa.me/${site.whatsappHref}?text=${encodeURIComponent(
-                        `Merhaba, ${row.date} (${row.duration}) ${row.program} umre kalkışı hakkında bilgi almak istiyorum.`
-                      )}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="btn-primary mt-5 w-full text-xs"
-                    >
-                      Bu Tarih İçin Bilgi Al
-                    </a>
-                  </div>
+                  <a
+                    href={`https://wa.me/${site.whatsappHref}?text=${encodeURIComponent(
+                      `Merhaba, ${row.date} (${row.duration}) ${row.program} umre kalkışı hakkında bilgi almak istiyorum.`
+                    )}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-ghost mt-5 w-full text-xs"
+                  >
+                    Bu Tarih İçin Bilgi Al
+                  </a>
                 </article>
               );
             })}

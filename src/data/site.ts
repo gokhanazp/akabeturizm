@@ -20,8 +20,8 @@ export const site = {
   },
   nav: [
     { label: "Anasayfa", href: "/" },
-    { label: "Hac", href: "/hac" },
     { label: "Umre", href: "/umre" },
+    { label: "Hac", href: "/hac" },
     { label: "Yurt İçi Turlar", href: "/yurt-ici-turlar" },
     { label: "Hakkımızda", href: "/hakkimizda" },
     { label: "Blog", href: "/blog" },
