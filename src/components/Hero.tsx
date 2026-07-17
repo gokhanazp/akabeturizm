@@ -101,7 +101,7 @@ export default function Hero() {
         {/* Sol: metin */}
         <div className="animate-fade-up">
           <span className="eyebrow">
-            <span className="h-px w-10 bg-gold-400" /> {site.slogan}
+            <span className="h-px w-10 bg-gold-400" /> Kutsal Topraklara Güvenle Yolculuk
           </span>
           <h1 className="mt-6 font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-ink text-balance sm:text-6xl">
             Hac ve Umre <br />

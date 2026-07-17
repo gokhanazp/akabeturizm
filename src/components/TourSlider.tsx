@@ -22,7 +22,8 @@ export default function TourSlider({ tours }: { tours: Tour[] }) {
     <div className="relative mt-12">
       <div
         ref={trackRef}
-        className="no-scrollbar flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2"
+        className="no-scrollbar flex touch-pan-x snap-x snap-proximity gap-6 overflow-x-auto overscroll-x-contain pb-2"
+        style={{ WebkitOverflowScrolling: "touch" }}
       >
         {tours.map((tour) => (
           <div
