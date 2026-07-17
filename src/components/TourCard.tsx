@@ -11,7 +11,7 @@ const categoryBase: Record<string, string> = {
 export default function TourCard({ tour }: { tour: Tour }) {
   const href = `${categoryBase[tour.category]}/${tour.slug}`;
   return (
-    <article className="card group flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-soft">
+    <article className="card group relative flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-soft">
       <div className="relative">
         <TourVisual image={tour.image} photo={tour.photo} alt={tour.title} className="aspect-[4/3] w-full" />
         {tour.badge && (

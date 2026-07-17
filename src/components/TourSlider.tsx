@@ -11,10 +11,11 @@ export default function TourSlider({ tours }: { tours: Tour[] }) {
     const track = trackRef.current;
     if (!track) return;
     const card = track.querySelector<HTMLElement>("[data-card]");
-    const step = card ? card.offsetWidth + 24 : track.clientWidth;
+    const step = card ? card.offsetWidth + 24 : 320;
+    const maxLeft = track.scrollWidth - track.clientWidth;
     let next = track.scrollLeft + dir * step;
-    if (dir > 0 && next > track.scrollWidth - track.clientWidth - 8) next = 0;
-    if (dir < 0 && track.scrollLeft <= 8) next = track.scrollWidth;
+    if (next > maxLeft - 4) next = 0; // sona gelince başa
+    else if (next < 4) next = dir < 0 ? maxLeft : 0; // başta geri → sona
     track.scrollTo({ left: next, behavior: "smooth" });
   }, []);
 

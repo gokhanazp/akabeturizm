@@ -82,8 +82,9 @@ export default function Hero() {
       </svg>
 
       <div className="container-x relative grid items-center gap-12 py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-24">
-        {/* Sol: metin (slayta göre değişir) */}
-        <div key={slide.key} className="animate-fade-up">
+        {/* Sol: metin (slayta göre değişir) + istatistikler */}
+        <div>
+          <div key={slide.key} className="animate-fade-up">
           <span className="eyebrow">
             <span className="h-px w-10 bg-gold-400" /> {slide.eyebrow}
           </span>
@@ -111,6 +112,21 @@ export default function Hero() {
               Ücretsiz Danışmanlık
             </a>
           </div>
+          </div>
+
+          {/* İstatistikler (sabit) */}
+          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-ink/10 pt-8">
+            {[
+              { n: "10+", l: "Yıllık Tecrübe" },
+              { n: "50.000+", l: "Mutlu Misafir" },
+              { n: "5★", l: "Otel Konaklama" },
+            ].map((s) => (
+              <div key={s.l}>
+                <dt className="font-serif text-3xl font-bold text-maroon-700">{s.n}</dt>
+                <dd className="mt-1 text-sm text-ink-soft">{s.l}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
         {/* Sağ: görsel paneli (slayta göre değişir) */}
@@ -164,21 +180,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* İstatistikler (sabit) */}
-      <div className="container-x relative -mt-4 pb-14 lg:pb-20">
-        <dl className="grid max-w-lg grid-cols-3 gap-6 border-t border-ink/10 pt-8">
-          {[
-            { n: "20+", l: "Yıllık Tecrübe" },
-            { n: "50.000+", l: "Mutlu Misafir" },
-            { n: "5★", l: "Otel Konaklama" },
-          ].map((s) => (
-            <div key={s.l}>
-              <dt className="font-serif text-3xl font-bold text-maroon-700">{s.n}</dt>
-              <dd className="mt-1 text-sm text-ink-soft">{s.l}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
     </section>
   );
 }
