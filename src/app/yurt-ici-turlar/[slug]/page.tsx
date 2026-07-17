@@ -3,6 +3,16 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import TourDetail from "@/components/TourDetail";
 import { tours, getTour } from "@/data/tours";
+
+// Karadeniz turu için il fotoğrafları galerisi
+const karadenizGallery = [
+  { name: "Trabzon", photo: "/galeri/karadeniz/trabzon.jpg" },
+  { name: "Rize", photo: "/galeri/karadeniz/rize.jpg" },
+  { name: "Batum", photo: "/galeri/karadeniz/batum.jpg" },
+  { name: "Samsun", photo: "/galeri/karadeniz/samsun.jpg" },
+  { name: "Ordu", photo: "/galeri/karadeniz/ordu.jpg" },
+  { name: "Giresun", photo: "/galeri/karadeniz/giresun.jpg" },
+];
 import { buildMetadata } from "@/lib/seo";
 import { site } from "@/data/site";
 
@@ -50,6 +60,8 @@ export default function YurtIciTourPage({
     },
   };
 
+  const isKaradeniz = tour.slug === "karadeniz-yaylalar-turu";
+
   return (
     <>
       <script
@@ -65,9 +77,14 @@ export default function YurtIciTourPage({
           { label: "Yurt İçi Turlar", href: "/yurt-ici-turlar" },
           { label: tour.title },
         ]}
-        tone="night"
+        tone={isKaradeniz ? "green" : "night"}
+        image={isKaradeniz ? "/galeri/karadeniz/hero.jpg" : undefined}
       />
-      <TourDetail tour={tour} />
+      <TourDetail
+        tour={tour}
+        gallery={isKaradeniz ? karadenizGallery : undefined}
+        galleryTitle="Gezilecek İller"
+      />
     </>
   );
 }

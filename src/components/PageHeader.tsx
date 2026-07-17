@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type Tone = "maroon" | "gold" | "night";
+type Tone = "maroon" | "gold" | "night" | "green";
 
 // Görsel YOKKEN kullanılan dolu degrade
 const toneBg: Record<Tone, string> = {
@@ -10,6 +10,8 @@ const toneBg: Record<Tone, string> = {
     "radial-gradient(80% 130% at 90% -10%, rgba(224,192,104,0.55) 0%, rgba(224,192,104,0) 50%), linear-gradient(135deg, #a5302f 0%, #6e1f20 60%, #3b1410 100%)",
   night:
     "radial-gradient(80% 130% at 80% -10%, rgba(201,144,48,0.35) 0%, rgba(201,144,48,0) 45%), linear-gradient(135deg, #4a0e0e 0%, #300d0d 55%, #160707 100%)",
+  green:
+    "radial-gradient(80% 130% at 85% -10%, rgba(52,153,90,0.45) 0%, rgba(52,153,90,0) 50%), linear-gradient(135deg, #1f5d38 0%, #173d26 55%, #0f2a1a 100%)",
 };
 
 // Görsel VARKEN kullanılan yarı saydam koyu kaplama (görsel silik görünür, yazı okunur)
@@ -20,6 +22,8 @@ const toneOverlay: Record<Tone, string> = {
     "radial-gradient(80% 130% at 90% -10%, rgba(224,192,104,0.24) 0%, rgba(224,192,104,0) 55%), linear-gradient(110deg, rgba(90,24,24,0.76) 0%, rgba(59,20,16,0.52) 55%, rgba(30,10,9,0.36) 100%)",
   night:
     "radial-gradient(80% 130% at 80% -10%, rgba(201,144,48,0.20) 0%, rgba(201,144,48,0) 50%), linear-gradient(110deg, rgba(40,11,11,0.82) 0%, rgba(22,7,7,0.60) 55%, rgba(12,5,5,0.44) 100%)",
+  green:
+    "radial-gradient(80% 130% at 85% -10%, rgba(52,153,90,0.28) 0%, rgba(52,153,90,0) 50%), linear-gradient(110deg, rgba(23,61,38,0.84) 0%, rgba(20,45,30,0.58) 55%, rgba(15,42,26,0.40) 100%)",
 };
 
 export default function PageHeader({

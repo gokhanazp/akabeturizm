@@ -3,7 +3,15 @@ import type { Tour } from "@/data/tours";
 import TourVisual from "./TourVisual";
 import { site } from "@/data/site";
 
-export default function TourDetail({ tour }: { tour: Tour }) {
+export default function TourDetail({
+  tour,
+  gallery,
+  galleryTitle = "Gezilecek Rotalar",
+}: {
+  tour: Tour;
+  gallery?: { name: string; photo: string }[];
+  galleryTitle?: string;
+}) {
   return (
     <section className="section bg-cream">
       <div className="container-x grid gap-10 lg:grid-cols-3">
@@ -15,6 +23,32 @@ export default function TourDetail({ tour }: { tour: Tour }) {
             alt={tour.title}
             className="aspect-[16/9] w-full rounded-2xl"
           />
+
+          {/* İller / rotalar galerisi */}
+          {gallery && gallery.length > 0 && (
+            <div className="mt-8">
+              <h2 className="heading-serif text-2xl text-ink">{galleryTitle}</h2>
+              <div className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-6">
+                {gallery.map((g) => (
+                  <div
+                    key={g.name}
+                    className="group relative overflow-hidden rounded-lg shadow-card ring-1 ring-ink/5"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={g.photo}
+                      alt={g.name}
+                      className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/85 to-transparent" />
+                    <span className="absolute inset-x-0 bottom-1.5 text-center font-serif text-xs font-bold text-white">
+                      {g.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="mt-8">
             <span className="eyebrow">{tour.subtitle}</span>
