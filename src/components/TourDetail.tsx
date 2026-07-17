@@ -28,7 +28,15 @@ export default function TourDetail({
           {gallery && gallery.length > 0 && (
             <div className="mt-8">
               <h2 className="heading-serif text-2xl text-ink">{galleryTitle}</h2>
-              <div className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-6">
+              <div
+                className={`mt-5 grid grid-cols-2 gap-3 ${
+                  gallery.length === 6
+                    ? "sm:grid-cols-3 lg:grid-cols-6"
+                    : gallery.length === 5
+                    ? "sm:grid-cols-3 lg:grid-cols-5"
+                    : "sm:grid-cols-4"
+                }`}
+              >
                 {gallery.map((g) => (
                   <div
                     key={g.name}

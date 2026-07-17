@@ -6,6 +6,7 @@ import FeatureIcon, { type FeatureIconName } from "@/components/FeatureIcon";
 import Testimonials from "@/components/Testimonials";
 import CategoryBanners from "@/components/CategoryBanners";
 import UmreFinder from "@/components/UmreFinder";
+import TourSlider from "@/components/TourSlider";
 import { tours } from "@/data/tours";
 import { posts } from "@/data/blog";
 import { site } from "@/data/site";
@@ -137,38 +138,18 @@ export default function HomePage() {
 
       {/* Yurt içi turlar tanıtım */}
       <section className="section bg-white">
-        <div className="container-x grid items-center gap-12 lg:grid-cols-2">
-          <div>
+        <div className="container-x">
+          <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading
               eyebrow="Yurt İçi Turlar"
               title="Türkiye'yi keşfetmeye ne dersiniz?"
-              description="Kapadokya'nın peri bacalarından Karadeniz'in yeşil yaylalarına; rehber eşliğinde keyifli kültür ve doğa turları."
+              description="Kapadokya'dan Karadeniz'e, Bursa'dan GAP'a; rehber eşliğinde keyifli kültür ve doğa turları."
             />
-            <ul className="mt-6 space-y-3 text-sm text-ink-soft">
-              {[
-                "Profesyonel rehber eşliğinde geziler",
-                "Konforlu ulaşım ve seçkin oteller",
-                "Hafta sonu ve resmi tatil kalkışları",
-              ].map((i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <span className="grid h-6 w-6 place-items-center rounded-full bg-gold-100 text-xs text-gold-700">
-                    ✓
-                  </span>
-                  {i}
-                </li>
-              ))}
-            </ul>
-            <Link href="/yurt-ici-turlar" className="mt-8 inline-flex btn-primary">
-              Yurt İçi Turları Gör
+            <Link href="/yurt-ici-turlar" className="btn-ghost">
+              Tüm Yurt İçi Turlar →
             </Link>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {tours
-              .filter((t) => t.category === "yurtici")
-              .map((tour) => (
-                <TourCard key={tour.slug} tour={tour} />
-              ))}
-          </div>
+          <TourSlider tours={tours.filter((t) => t.category === "yurtici")} />
         </div>
       </section>
 
