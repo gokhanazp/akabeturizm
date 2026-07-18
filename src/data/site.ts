@@ -6,12 +6,13 @@ export const site = {
   description:
     "Akabe Turizm; hac ve umre organizasyonları ile yurt içi kültür turları düzenleyen, güven ve manevi konfor odaklı kurumsal seyahat acentasıdır.",
   slogan: "Kutsal yolculuğunuz emin ellerde",
-  phone: "+90 552 398 61 61",
-  phoneHref: "+905523986161",
+  phone: "0212 531 02 32",
+  phoneHref: "+902125310232",
   whatsapp: "+90 552 398 61 61",
   whatsappHref: "905523986161",
   email: "info@akabeturizm.com.tr",
-  address: "İstanbul",
+  address:
+    "Mehmet Akif Mahallesi 1. Mehmetçik Sokak No:30 Küçükçekmece / İstanbul",
   tursabNo: "TÜRSAB Üyesidir",
   social: {
     instagram: "https://www.instagram.com/akabe_turizm/",

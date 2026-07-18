@@ -69,8 +69,8 @@ export const tours: Tour[] = [
     price: "$1.050",
     priceNote: "kişi başı, 4'lü odada başlayan fiyat",
     hotelLevel: "Servisli Otel · Sabah–Akşam Yemek",
-    hotelMekke: "Razan Al Misk vb.",
-    hotelMedine: "Mercan vb.",
+    hotelMekke: "Servisli Otel Programı",
+    hotelMedine: "Yürüme Mesafeli Otel",
     roomPrices: { two: "$1.150 – $1.300", three: "$1.100 – $1.250", four: "$1.050 – $1.200" },
     highlights: [
       "En avantajlı fiyat",
@@ -115,8 +115,8 @@ export const tours: Tour[] = [
     price: "$1.550",
     priceNote: "kişi başı, 4'lü odada başlayan fiyat",
     hotelLevel: "Yakın Otel · Sabah–Akşam Yemek",
-    hotelMekke: "Ravha Maqam vb.",
-    hotelMedine: "Mercan vb.",
+    hotelMekke: "3-4 Yıldızlı Otel Programı",
+    hotelMedine: "Yürüme Mesafeli Otel",
     roomPrices: { two: "$1.650", three: "$1.600", four: "$1.550" },
     highlights: [
       "Harem'e yakın konum",
@@ -160,8 +160,8 @@ export const tours: Tour[] = [
     price: "$1.650",
     priceNote: "kişi başı, 4'lü odada başlayan fiyat",
     hotelLevel: "5 Yıldız · Harem'e yakın",
-    hotelMekke: "Le Méridien vb.",
-    hotelMedine: "Emaar Royal vb.",
+    hotelMekke: "5 Yıldızlı Otel Programı",
+    hotelMedine: "Yürüme Mesafeli Otel",
     roomPrices: { two: "$1.750", three: "$1.700", four: "$1.650" },
     highlights: [
       "5 yıldızlı premium oteller",
