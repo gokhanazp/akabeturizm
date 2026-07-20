@@ -8,9 +8,9 @@ const slides = [
   {
     key: "umre",
     eyebrow: "Kutsal Topraklara Güvenle Yolculuk",
-    title: "Mescid-i Nebevî'nin Manevi Atmosferine",
-    accent: "Yolculuk",
-    text: "Duaların huzurla buluştuğu, gönüllerin sükûnet bulduğu Medine-i Münevvere'de unutulmaz bir ibadet deneyimi sizi bekliyor. Konforlu ve güvenilir hizmet anlayışımızla bu kutlu yolculuğu birlikte gerçekleştiriyoruz.",
+    title: "Kutsal Yolculuğunuz",
+    accent: "Güvenle Başlasın",
+    text: "Mukaddes topraklara yapacağınız hac ve umre yolculuğunda; tecrübeli ekibimiz, özenle planlanmış organizasyonlarımız ve güvenilir hizmet anlayışımızla her an yanınızdayız.",
     ctaLabel: "Umre Paketlerini İncele",
     ctaHref: "/umre",
     image: "/hero-kabe.jpg",
