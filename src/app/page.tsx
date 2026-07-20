@@ -143,7 +143,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Yurt İçi Turlar"
               title="Türkiye'yi keşfetmeye ne dersiniz?"
-              description="Kapadokya'dan Karadeniz'e, Bursa'dan GAP'a; rehber eşliğinde keyifli kültür ve doğa turları."
+              description="Karadeniz'den Bursa'ya, Eskişehir'den GAP'a; rehber eşliğinde keyifli kültür ve doğa turları."
             />
             <Link href="/yurt-ici-turlar" className="btn-ghost">
               Tüm Yurt İçi Turlar →

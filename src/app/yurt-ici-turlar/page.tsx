@@ -7,15 +7,16 @@ import { site } from "@/data/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Yurt İçi Turlar | Kapadokya, Karadeniz Kültür ve Doğa Turları",
+  title: "Yurt İçi Turlar | Karadeniz, Bursa, Eskişehir ve GAP Turları",
   description:
-    "Akabe Turizm yurt içi turları: Kapadokya kültür turu, Karadeniz yaylalar turu ve daha fazlası. Rehber eşliğinde konforlu ulaşım ve seçkin otellerle Türkiye'yi keşfedin.",
+    "Akabe Turizm yurt içi turları: Karadeniz turu, Bursa turu, Eskişehir turu ve GAP turu. Rehber eşliğinde konforlu ulaşım ve seçkin otellerle Türkiye'yi keşfedin.",
   path: "/yurt-ici-turlar",
   keywords: [
     "yurt içi turlar",
     "kültür turları",
-    "Kapadokya turu",
     "Karadeniz turu",
+    "Bursa turu",
+    "GAP turu",
     "doğa turları",
     "hafta sonu turları",
   ],
@@ -29,7 +30,7 @@ export default function YurtIciPage() {
       <PageHeader
         eyebrow="Keşfet"
         title="Yurt İçi Turlar"
-        description="Kapadokya'nın eşsiz coğrafyasından Karadeniz'in yeşil yaylalarına; rehber eşliğinde keyifli kültür ve doğa turları."
+        description="Karadeniz'in yeşil yaylalarından tarihi Bursa'ya, Eskişehir'den GAP'a; rehber eşliğinde keyifli kültür ve doğa turları."
         breadcrumb={[{ label: "Anasayfa", href: "/" }, { label: "Yurt İçi Turlar" }]}
         tone="night"
       />

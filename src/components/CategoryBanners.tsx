@@ -24,7 +24,7 @@ const banners = [
     image: "/yurtici-turlari.jpg",
     eyebrow: "Kültür & Doğa",
     title: "Yurt İçi Turlar",
-    desc: "Kapadokya'dan Karadeniz'e rehberli kültür ve doğa turları.",
+    desc: "Karadeniz'den GAP'a rehberli kültür ve doğa turları.",
     imageHasTitle: false,
   },
 ];

@@ -47,7 +47,7 @@ export const tours: Tour[] = [
   {
     slug: "servisli-otel-umre",
     category: "umre",
-    photo: "/galeri/0a4792c1-5df2-49fb-b923-7211da011366.jpeg",
+    photo: "/galeri/servisli.jpg",
     title: "Servisli Otel Programı",
     subtitle: "Konforlu konaklama, en avantajlı fiyat",
     summary:
@@ -101,7 +101,7 @@ export const tours: Tour[] = [
   {
     slug: "yakin-otel-umre",
     category: "umre",
-    photo: "/galeri/0b782acc-d5ea-430f-8c09-a0dfbf224394.jpeg",
+    photo: "/galeri/yakin.jpg",
     title: "Yakın Otel Programı",
     subtitle: "Harem'e yakın konaklama",
     summary:
@@ -192,7 +192,7 @@ export const tours: Tour[] = [
   {
     slug: "normal-hac-programi",
     category: "hac",
-    photo: "/galeri/53046865-be13-4a0e-82f2-4f072909ea36.jpeg",
+    photo: "/galeri/normal-hac.jpg",
     title: "Normal Hac Programı",
     subtitle: "Konforlu konaklama, sabah–akşam tabldot yemek",
     summary:
@@ -365,42 +365,6 @@ export const tours: Tour[] = [
     ],
     badge: "Ekonomik",
     image: "hac",
-  },
-  {
-    slug: "kapadokya-turu",
-    category: "yurtici",
-    title: "Kapadokya Kültür Turu",
-    subtitle: "Peri bacaları ve yeraltı şehirleri",
-    summary:
-      "2 gece konaklamalı, balon turu opsiyonlu, rehber eşliğinde Kapadokya'nın eşsiz coğrafyasını keşif turu.",
-    description: [
-      "UNESCO Dünya Mirası listesindeki Kapadokya, peri bacaları, yeraltı şehirleri ve kaya kiliseleriyle Türkiye'nin en etkileyici destinasyonlarından biridir. Rehber eşliğinde Göreme Açık Hava Müzesi, Derinkuyu Yeraltı Şehri ve Uçhisar Kalesi'ni gezeceğiniz keyifli bir program.",
-      "Dileyen misafirlerimiz için gün doğumunda sıcak hava balonu turu opsiyonel olarak eklenebilir.",
-    ],
-    duration: "2 Gece / 3 Gün",
-    dates: ["Her hafta sonu", "Resmi tatillerde özel kalkışlar"],
-    price: "₺12.500",
-    priceNote: "kişi başı, çift kişilik odada",
-    hotelLevel: "4 Yıldız / Butik kaya otel",
-    highlights: [
-      "Göreme Açık Hava Müzesi",
-      "Derinkuyu Yeraltı Şehri",
-      "Opsiyonel balon turu",
-      "Rehberli geziler",
-    ],
-    included: [
-      "Ulaşım (otobüs/uçak opsiyonlu)",
-      "2 gece konaklama ve kahvaltı",
-      "Rehberlik hizmeti",
-      "Müze giriş ücretleri",
-    ],
-    excluded: ["Balon turu", "Öğle ve akşam yemekleri", "Kişisel harcamalar"],
-    itinerary: [
-      { day: "1. Gün", title: "Varış", detail: "Karşılama, Uçhisar ve Güvercinlik Vadisi." },
-      { day: "2. Gün", title: "Tam gün tur", detail: "Göreme, Derinkuyu ve vadi yürüyüşleri." },
-      { day: "3. Gün", title: "Dönüş", detail: "Avanos çömlek atölyesi ve dönüş." },
-    ],
-    image: "kapadokya",
   },
   {
     slug: "karadeniz-yaylalar-turu",
@@ -576,7 +540,7 @@ export const tourCategories: { id: TourCategory; label: string; href: string; de
     id: "yurtici",
     label: "Yurt İçi Turlar",
     href: "/yurt-ici-turlar",
-    description: "Kapadokya'dan Karadeniz'e kültür ve doğa turları.",
+    description: "Karadeniz'den GAP'a kültür ve doğa turları.",
   },
 ];
 
